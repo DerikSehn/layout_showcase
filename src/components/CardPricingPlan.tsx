@@ -1,3 +1,4 @@
+
 export type CategoryProps = {
     categoryName: string;
     items: string[];
@@ -11,13 +12,14 @@ export type PricingPlanProps = {
     categories: CategoryProps[]
     button?: JSX.Element;
     color?: string;
+    onClick?: () => void;
 } 
 
-export default function CardPricingPlan({ className, image, title, price, button, categories, color } : PricingPlanProps ) {
+export default function CardPricingPlan({ className, image, title, price, button, categories, color, onClick } : PricingPlanProps ) {
+
 
   return (
-    <div className={`shadow-xl rounded-[1rem] min-h-[550px] w-96 bg-slate-200 ${className}`} >
-       
+    <div role="button" onClick={onClick} className={`shadow-xl rounded-[1rem] min-h-[550px] w-96 bg-gradient-to-b from-[rgb(255,255,255,.9)] to-[rgb(255,255,255,.6)] backdrop-blur-md ${className}`} >
         <div key={color} 
         style={{ 
             backgroundImage: `linear-gradient(to bottom, color-mix(in srgb, ${color} 80%, black), color-mix(in srgb, ${color} 40%, black))`

@@ -4,7 +4,7 @@ export default  {
      'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-   darkMode: false,
+   darkMode: "class",
   theme: {
     extend: {
       colors: {

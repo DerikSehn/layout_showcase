@@ -4,13 +4,14 @@ import imgAdicionais from '../assets/food_coxinha.jpg'
 import imgPlus from '../assets/landing_page/carousel/food_11.jpg'
 import imgExecutivo from '../assets/food_hamburguer.jpg'
 import CardPricingPlan, { PricingPlanProps } from './CardPricingPlan';
+import { handleCardMenuPlanClick } from '../functions/handlers/plan';
 
 const AdultPlans: React.FC = () => {
 
 const plansList: PricingPlanProps[] = [
     {
       title: 'Menu Executivo',
-      color: 'green',
+      color: 'black',
       image: imgExecutivo,
       categories: [{
         categoryName: 'Entrada (Massas)',
@@ -55,7 +56,7 @@ const plansList: PricingPlanProps[] = [
     },   
     {
       title: 'Menu Plus',
-      color: 'purple',
+      color: 'gray',
       image: imgPlus,
       categories: [
         {
@@ -111,7 +112,7 @@ const plansList: PricingPlanProps[] = [
     },
     {
       title: 'Adicionais',
-      color: 'gray',
+      color: 'darkOrange',
       image: imgAdicionais,
       categories: [
         {
@@ -156,18 +157,18 @@ const plansList: PricingPlanProps[] = [
   ]
 
     return (
-    <section className="bg-gray-100 h-[904px]">
-      <div className='absolute max-h-[904px] z-0'>
-        <img className='container object-cover z-0 brightness-[.2] min-w-[100vw] max-h-[904px] '
+    <section id='plans'  className="bg-gray-100 sm:h-[900px] h-[2500px]">
+      <div className='absolute min-w-full sm:max-h-[900px] max-h-[2500px] z-0'>
+        <img className='container object-cover z-0 brightness-[.2] min-w-full sm:max-h-[900px] max-h-[2500px]  '
           style={{zIndex: 0}}
         src={bgImg}/>
       </div>
       <div className='absolute w-full max-h-[600px] z-10 mt-10'>
        <div className='container mx-auto px-2'>
          <h2 className="text-6xl text-zinc-300 text-center font-semibold ">Cardápio Adulto</h2>
-         <div className='container mt-10 flex gap-5 justify-center'>
-          {plansList.map((plan) => 
-                  <CardPricingPlan {...plan} key={plan.title}/> 
+         <div className='container mt-10 flex gap-20 flex-wrap justify-center'>
+          {plansList.map((plan, index) => 
+                  <CardPricingPlan {...plan} key={plan.title} onClick={() => handleCardMenuPlanClick(plan.image || '', index)}/> 
           )}
         </div>
        </div>

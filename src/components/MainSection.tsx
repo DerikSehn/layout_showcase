@@ -5,7 +5,7 @@ const MainSection: React.FC = () => {
   
   
     return (
-    <section className="h-[700px] lg:h-[750px] bg-black mt-[-96px] relative">
+    <section id='inicio' className="h-[700px] lg:h-[750px] bg-black mt-[-96px] relative">
       <div className='absolute w-full max-h-[650px] pt-24 z-0'>
         <img className='container mx-auto object-cover z-0 brightness-110 w-full max-h-[650px] sm:w-96 md:w-[700px] mt-10'
           style={{zIndex: 0}}
