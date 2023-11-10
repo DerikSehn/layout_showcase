@@ -2,11 +2,12 @@ import { Button, Card, Label, TextInput } from 'flowbite-react';
 import { HiMail } from 'react-icons/hi';
 import ModalPolicy from '../ModalPolicy';
 import env from '../../env';
+import { useState } from 'react';
 
 
 export default function MailForm({className} : {className?: string}) {
 
-
+const [message, setMessage] = useState<string | undefined>();
   return (
     
     
@@ -21,7 +22,7 @@ export default function MailForm({className} : {className?: string}) {
           <Label htmlFor="message" value="Sua Mensagem:"  
          />
         </div>
-        <TextInput id="message" type="text" sizing="lg" required icon={HiMail}   helperText={
+        <TextInput id="message" type="text" sizing="lg" onBlur={({target}) => setMessage(target.value)} required icon={HiMail}   helperText={
           <>
             Não armazenaremos seu e-mail, em acordo com as 
            <ModalPolicy>
@@ -30,7 +31,7 @@ export default function MailForm({className} : {className?: string}) {
             .
           </>
         }/>
-        <Button href={`mailto:${env.companyMail}`} className='mt-10 transition'>
+        <Button href={`mailto:${env.companyMail}&subject=Contato&body=<b>${message}</b>`} className='mt-10 transition'>
           Enviar
         </Button>
     </form>

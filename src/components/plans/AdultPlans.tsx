@@ -1,10 +1,10 @@
 import React from 'react';
-import bgImg from '../assets/foto_derik.jpg'
-import imgAdicionais from '../assets/food_coxinha.jpg'
-import imgPlus from '../assets/landing_page/carousel/food_11.jpg'
-import imgExecutivo from '../assets/food_hamburguer.jpg'
-import CardPricingPlan, { PricingPlanProps } from './CardPricingPlan';
-import { handleCardMenuPlanClick } from '../functions/handlers/plan';
+import bgImg from '../../assets/foto_derik.jpg'
+import imgAdicionais from '../../assets/food_coxinha.jpg'
+import imgPlus from '../../assets/landing_page/carousel/food_11.jpg'
+import imgExecutivo from '../../assets/food_hamburguer.jpg'
+import CardPricingPlan, { PricingPlanProps } from '../CardPricingPlan';
+import { handleCardMenuPlanClick } from '../../functions/handlers/plan';
 
 const AdultPlans: React.FC = () => {
 

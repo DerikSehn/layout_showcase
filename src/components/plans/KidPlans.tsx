@@ -1,10 +1,9 @@
+import { Card } from 'flowbite-react';
 import React from 'react';
-import bgImg from '../assets/landing_page/child_party.jpg'
-import img1 from '../assets/landing_page/cardapios/classico.jpeg'
-import img2 from '../assets/landing_page/cardapios/premium.jpeg'
-import img3 from '../assets/landing_page/cardapios/tortas.jpeg'
-import { Button, Card } from 'flowbite-react';
-import { handleCardMenuPlanClick } from '../functions/handlers/plan';
+import img1 from '../../assets/landing_page/cardapios/classico.jpeg';
+import img2 from '../../assets/landing_page/cardapios/premium.jpeg';
+import img3 from '../../assets/landing_page/cardapios/tortas.jpeg';
+import bgImg from '../../assets/landing_page/child_party.jpg';
 
 
 
@@ -26,7 +25,7 @@ const KidPlans: React.FC = () => {
        <div className='container mx-auto px-2'>
          <h2 className="text-6xl text-zinc-300 text-center font-semibold ">Cardápio Infantil</h2>
          <div className='container mt-10 flex gap-20 flex-wrap justify-center'>
-          {arrCardapios.map((src, index) => 
+          {arrCardapios.map((src) => 
 
             <Card  key={src}
                   className="bg-black border-none rounded-lg 
@@ -34,9 +33,9 @@ const KidPlans: React.FC = () => {
                   origin-top hover:z-10 transition duration-300"
                  renderImage={() => <img className='shadow-m object-cover w-full rounded-t-lg' src={src} alt=' . . . '/>}
                  >
-                  <Button href='#contato' className='bg-slate-100 text-yellow-600' onClick={() => handleCardMenuPlanClick(src, index)}>
+                 {/*  <Button href='#contato' className='bg-slate-100 text-yellow-600' onClick={() => handleCardMenuPlanClick(src, index)}>
                     Selecionar
-                  </Button>
+                  </Button> */}
                 </Card>
            )}
         </div>

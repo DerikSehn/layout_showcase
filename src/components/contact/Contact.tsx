@@ -1,10 +1,11 @@
 // src/components/Contact.tsx
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 import MailForm from './MailForm';
 import SocialMedia from './SocialMedia';
-import { isMobile } from 'react-device-detect';
 
 const Contact: React.FC = () => {
+  
   return (
     <section id="contact" className="bg-zinc-950 p-4 py-8 h-[1750px] sm:h-[850px]">
       <div className="container mx-auto">

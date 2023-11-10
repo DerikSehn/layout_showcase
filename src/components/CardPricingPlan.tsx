@@ -36,17 +36,17 @@ export default function CardPricingPlan({ className, image, title, price, button
             <h5 key={categoryName} className="text-gray-700 font-bold">
                 {categoryName}
             </h5>
-            <p className='font-thin text-gray-600 text-sm px-4'>
+            <p className='font-bold text-gray-500 text-sm px-4'>
                 {items.join(', ')}
             </p>
         <br/>
 
-        </div>
-        )}
+        </div>)}
         {button}
     </div>
   )
 }
+
 
 CardPricingPlan.defaultProps = {
     className: undefined
