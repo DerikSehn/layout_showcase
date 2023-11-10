@@ -1,174 +1,42 @@
 import React from 'react';
 import bgImg from '../assets/landing_page/child_party.jpg'
-import imgAdicionais from '../assets/food_coxinha.jpg'
-import imgPlus from '../assets/landing_page/carousel/food_11.jpg'
-import imgClassico from '../assets/landing_page/carousel/food_5.jpeg'
-import CardPricingPlan, { PricingPlanProps } from './CardPricingPlan';
+import img1 from '../assets/landing_page/cardapios/classico.jpeg'
+import img2 from '../assets/landing_page/cardapios/premium.jpeg'
+import img3 from '../assets/landing_page/cardapios/tortas.jpeg'
+import { Button, Card } from 'flowbite-react';
+import { handleCardMenuPlanClick } from '../functions/handlers/plan';
+
+
 
 const KidPlans: React.FC = () => {
 
- const plansList: PricingPlanProps[] = [
-    {
-      title: 'Clássico',
-      color: 'yellow',
-      image: imgClassico,
-      categories: [{
-        categoryName: 'Salgados',
-        items: [
-          'Ao Molho Branco',
-          'Com Iscas de Carne',
-          'Com Calabresa'
-        ],
-      },
-      {
-        categoryName: 'Fritos e Assados',
-        items: [
-          'Mini Hamburguer',
-          'Mini Pizza',
-          'Pastéis de massa caseira',
-          'Cachorrinho-quente',
-          'Batata frita',
-          'Polenta'
-        ],
-      },
-      {
-        categoryName: 'Doces tradicionais',
-        items: [
-          'Brigadeiro',
-          'Amendoim',
-          'Branquinho',
-          'Morango',
-          'Casadinho'
-        ],
-      },
-      {
-        categoryName: 'Doces Gourmet',
-        items: [
-          'Ninho c/ Nutella',
-          'Churros',
-          'Estikadinho'
-        ],
-      }
-      
-    ],
-
-    },   
-    {
-      title: 'Menu Plus',
-      color: 'blue',
-      image: imgPlus,
-      categories: [
-        {
-          categoryName: 'Entrada (Massas)',
-          items: [
-            'Ao Molho Branco',
-            'Com Iscas de Carne',
-            'Com Calabresa',
-            'Ao Molho de Camarão',
-            'Risoto de Camarão',
-          ],
-        },
-        {
-          categoryName: 'Fritos e Assados',
-          items: [
-            'Mini Hamburguer',
-            'Mini Pizza',
-            'Pastéis de massa caseira',
-            'Cachorrinho-quente',
-            'Batata frita',
-          ],
-        },
-        {
-          categoryName: 'Doces',
-          items: [
-            'Brigadeiro',
-            'Branquinho',
-            'Ninho com Nutella',
-            'Churros',
-            'Casadinho'
-          ],
-        },
-        {
-          categoryName: 'Doces Gourmet',
-          items: [
-            'Copinhos de Chocolate',
-          ],
-        },  
-        {
-          categoryName: 'Opcionais (Unidade)',
-          items: [
-            'Cup Cake',
-            'Cachorro Quente',
-            'Mini Hamburguer',
-            'Espetinho de Camarão',
-            'Espetinho de MarshMellow',
-            'Espetinho de Morango Negro',
-            'Alfajor'
-
-          ],
-        },
-      ],
-    },
-    {
-      title: 'Adicionais',
-      color: 'pink',
-      image: imgAdicionais,
-      categories: [
-        {
-          categoryName: 'Salgados',
-          items: [
-            'Mini Hamburguer',
-            'Mini Pizza',
-            'Pão de queijo',
-            'Cachorro-Quente',
-            'Espetinho de Camarão',
-            'Espetinho de marshimelow'
-          ],
-        },
-        {
-          categoryName: 'Doces',
-          items: [
-            'Alfajor de bolacha maria banhado',
-            'Espetinho de morango c/ chocolate',
-            'Cup Cake',
-            'Brigadeiro',
-            'Branquinho',
-            'Ninho c/ Nutella',
-            'Churros',
-            'Estikadinho',
-            'Copinho de Chocolate'
-          ],
-        },
-        {
-          categoryName: 'Bebidas',
-          items: [
-            'Água',
-            'Refrigerante',
-            'Cerveja',
-            'Vinho',
-            'Café',
-            'Suco'
-          ],
-        },
-      ],
-    },
-  
+  const arrCardapios = [
+    img1, img2, img3
   ]
 
+
     return (
-    <section className="bg-gray-100 h-[904px]">
-      <div className='absolute max-h-[904px] z-0'>
-        <img className='container object-cover z-0 brightness-[.2] min-w-[100vw] max-h-[904px] '
+    <section className="bg-gray-100 sm:h-[1004px] h-[2600px]  ">
+      <div className='absolute min-w-full sm:h-[1004px] h-[2600px] z-0'>
+        <img className='container object-cover z-0 brightness-[.2] min-w-full sm:h-[1004px] h-[2600px]'
           style={{zIndex: 0}}
         src={bgImg}/>
       </div>
       <div className='absolute w-full max-h-[600px] z-10 mt-10'>
        <div className='container mx-auto px-2'>
          <h2 className="text-6xl text-zinc-300 text-center font-semibold ">Cardápio Infantil</h2>
-         <div className='container mt-10 flex gap-5 justify-center'>
-          {plansList.map((plan) => 
-                  <CardPricingPlan {...plan} key={plan.title}/> 
-          )}
+         <div className='container mt-10 flex gap-20 flex-wrap justify-center'>
+          {arrCardapios.map((src, index) => 
+
+            <Card  
+                  className="bg-black border-none rounded-lg hover:shadow-[20px 20px 20px] hover:sm:scale-110 w-full max-w-md sm:w-full origin-top hover:z-10 transition duration-300"
+                 renderImage={() => <img className='shadow-m object-cover w-full rounded-t-lg' src={src} alt=' . . . '/>}
+                 >
+                  <Button href='#contato' className='bg-slate-100 text-yellow-600' onClick={() => handleCardMenuPlanClick(src, index)}>
+                    Selecionar
+                  </Button>
+                </Card>
+           )}
         </div>
        </div>
       </div>
