@@ -7,7 +7,7 @@ export default function ModalPolicy({children}: {children: JSX.Element | any}) {
   const [openModal, setOpenModal] = useState(false);
 
     return (<>
-    <button onClick={() => setOpenModal(true)} className="ml-1 p-0 font-medium text-cyan-600 hover:underline dark:text-cyan-500">
+    <button onClick={() => setOpenModal(true)} className="ml-1 p-0 font-medium bg-zinc-200 text-cyan-600 hover:underline dark:text-cyan-500">
             {children}
             </button>
             <Modal show={openModal}  onClose={() => setOpenModal(false)}>

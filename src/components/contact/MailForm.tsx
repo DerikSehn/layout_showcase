@@ -10,10 +10,10 @@ export default function MailForm({className} : {className?: string}) {
   return (
     
     
-     <Card className={"max-w-md m-auto my-10 min-w-full relative " + className}>
+     <Card className={"max-w-md m-auto my-10 min-w-full relative bg-gray-200 " + className}>
           <span className="material-icons absolute rotate-[15deg] right-14 top-12 scale-[4] text-zinc-500">mail</span>
 
-      <h2 className='font-extrabold text-3xl'>
+      <h2 className='font-extrabold text-3xl text-zinc-700'>
       Email
       </h2>
          <form className='w-full py-10'> 
@@ -30,7 +30,7 @@ export default function MailForm({className} : {className?: string}) {
             .
           </>
         }/>
-        <Button href={`mailto:${env.companyMail}`} className='mt-10 bg-yellow-900 hover:bg-yellow-600 transition'>
+        <Button href={`mailto:${env.companyMail}`} className='mt-10 transition'>
           Enviar
         </Button>
     </form>

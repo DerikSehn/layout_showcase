@@ -157,16 +157,16 @@ const plansList: PricingPlanProps[] = [
   ]
 
     return (
-    <section id='plans'  className="bg-gray-100 sm:h-[900px] h-[2500px]">
-      <div className='absolute min-w-full sm:max-h-[900px] max-h-[2500px] z-0'>
-        <img className='container object-cover z-0 brightness-[.2] min-w-full sm:max-h-[900px] max-h-[2500px]  '
+    <section id='plans'  className="bg-gray-100 xl:h-[900px] lg:h-[1500px] h-[2200px]">
+      <div className='absolute min-w-full xl:h-[900px] lg:h-[1500px] h-[2200px] z-0'>
+        <img className='container object-cover z-0 brightness-[.2] min-w-full xl:h-[900px] lg:h-[1500px] h-[2200px]  '
           style={{zIndex: 0}}
         src={bgImg}/>
       </div>
       <div className='absolute w-full max-h-[600px] z-10 mt-10'>
        <div className='container mx-auto px-2'>
          <h2 className="text-6xl text-zinc-300 text-center font-semibold ">Cardápio Adulto</h2>
-         <div className='container mt-10 flex gap-20 flex-wrap justify-center'>
+         <div className='container mt-10 flex gap-10 flex-wrap justify-center'>
           {plansList.map((plan, index) => 
                   <CardPricingPlan {...plan} key={plan.title} onClick={() => handleCardMenuPlanClick(plan.image || '', index)}/> 
           )}

@@ -1,5 +1,6 @@
 // src/components/Footer.tsx
 import React from 'react';
+import env from '../env';
 
 const Footer: React.FC = () => {
   return (
@@ -15,9 +16,9 @@ const Footer: React.FC = () => {
         </div>
         <div className="mt-4 md:mt-0">
           <div className="flex space-x-4 m-4">
-            <a href="#" className="hover:text-blue-400">Facebook</a>
-            <a href="#" className="hover:text-blue-400">Instagram</a>
-            <a href="#" className="hover:text-blue-400">Twitter</a>
+            <a href={"mailto:" + env.companyMail} className="hover:text-blue-400">Email</a>
+            <a href={env.links.instagram} className="hover:text-blue-400">Instagram</a>
+            <a href="#" className="hover:text-blue-400">WhatsApp</a>
           </div>
         </div>
       </div>

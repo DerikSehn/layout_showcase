@@ -16,9 +16,9 @@ const KidPlans: React.FC = () => {
 
 
     return (
-    <section className="bg-gray-100 sm:h-[1004px] h-[2600px]  ">
-      <div className='absolute min-w-full sm:h-[1004px] h-[2600px] z-0'>
-        <img className='container object-cover z-0 brightness-[.2] min-w-full sm:h-[1004px] h-[2600px]'
+    <section className="bg-gray-100 2xl:h-[900px] lg:h-[1800px] h-[2500px]  ">
+      <div className='absolute min-w-full 2xl:h-[900px] lg:h-[1800px] h-[2500px] z-0'>
+        <img className='container object-cover z-0 brightness-[.2] min-w-full 2xl:h-[900px] lg:h-[1800px] h-[2500px]'
           style={{zIndex: 0}}
         src={bgImg}/>
       </div>
@@ -28,8 +28,10 @@ const KidPlans: React.FC = () => {
          <div className='container mt-10 flex gap-20 flex-wrap justify-center'>
           {arrCardapios.map((src, index) => 
 
-            <Card  
-                  className="bg-black border-none rounded-lg hover:shadow-[20px 20px 20px] hover:sm:scale-110 w-full max-w-md sm:w-full origin-top hover:z-10 transition duration-300"
+            <Card  key={src}
+                  className="bg-black border-none rounded-lg 
+                  hover:shadow-[20px 20px 20px] hover:sm:scale-110 w-full max-w-md 
+                  origin-top hover:z-10 transition duration-300"
                  renderImage={() => <img className='shadow-m object-cover w-full rounded-t-lg' src={src} alt=' . . . '/>}
                  >
                   <Button href='#contato' className='bg-slate-100 text-yellow-600' onClick={() => handleCardMenuPlanClick(src, index)}>

@@ -1,10 +1,11 @@
-export default  {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
     "./index.html",
-     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-   darkMode: "class",
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -15,10 +16,10 @@ export default  {
   },
   variants: {
     extend: {},
-  }, 
-   plugins: [
-        // eslint-disable-next-line no-undef
-        require('flowbite/plugin')
-    ]
+  },
+  plugins: [
+    // eslint-disable-next-line no-undef
+    require('flowbite/plugin')
+  ]
 }
 

@@ -19,7 +19,7 @@ export default function AboutUs() {
     img7
     ]
   return (
-  <section id='inicio' className="h-[700px] lg:h-[750px] bg-zinc-900 pt-10 relative">
+  <section id='about' className="bg-zinc-900 py-10 relative">
     <div className="container grid sm:grid-cols-2 mx-auto px-2 pt-8 ">
          <div className="text-zinc-300 font-thin text-2xl mr-2">
             <h2 className="text-5xl font-semibold mb-4 text-zinc-200">Sobre nós</h2>
@@ -42,7 +42,10 @@ export default function AboutUs() {
         <br/>
 
         <p className="text-zinc-300 font-bold text-2xl">
-           Entre em contato conosco e solicite um orçamento. Será um prazer atender você!
+          <a href="#contact" className="pr-2">
+             Entre em contato
+            </a>
+              conosco e solicite um orçamento. Será um prazer atender você!
 
         </p>
          </div>
