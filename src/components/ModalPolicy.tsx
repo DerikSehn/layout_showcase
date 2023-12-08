@@ -16,8 +16,8 @@ export default function ModalPolicy({children}: {children: JSX.Element | any}) {
         <div className="space-y-6">
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
             A sua privacidade é importante para nós. 
-            É política de Dani Bosing Eventos 
-            respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site Dani Bosing Eventos, 
+            É política de Derik Bosing Sehn 
+            respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site Derik Bosing Sehn, 
             e outros sites que possuímos e operamos.
             </p>
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
@@ -52,7 +52,7 @@ export default function ModalPolicy({children}: {children: JSX.Element | any}) {
             <ul className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
             <li >
             O usuário se compromete a fazer uso adequado dos conteúdos e da informação que 
-            Dani Bosing Eventos oferece no site e com caráter enunciativo, mas não limitativo:
+            Derik Bosing Sehn oferece no site e com caráter enunciativo, mas não limitativo:
             </li>
             <li>
             Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, kiwibet ou azar, qualquer tipo 
