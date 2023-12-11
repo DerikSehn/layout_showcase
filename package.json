@@ -17,7 +17,10 @@
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "swiper": "^11.0.5",
+    "swiper-react": "^1.0.0",
+    "tailwindcss-animated": "^1.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",

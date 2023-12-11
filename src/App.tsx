@@ -1,8 +1,7 @@
 // src/components/LandingPage.tsx
 import React from 'react';
-
-import profile from './assets/foto_derik.jpg'
-import 'swiper/css'
+import Header from './components/Header';
+import Hero from './components/Hero';
 
 /* import ServicesSection from './components/ServicesSection';
 import Header from './components/Header';
@@ -14,8 +13,14 @@ import Contact from './components/contact/Contact';
 import AboutUs from './components/AboutUs'; */
 
 const LandingPage: React.FC = () => {
-  return (
-        <>aaa</>
+  const onSlideChange = (...evt) => {
+    console.log(evt)
+  }
+  return (<>
+        <Header/>
+        <Hero SwiperProps={{onSlideChange}}/>
+      
+  </>
   );
 };
 

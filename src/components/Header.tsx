@@ -1,51 +1,18 @@
 // src/components/Header.tsx
 import React from 'react';
-import imglogo from '../assets/logo_dani.png'
-import imgPerfil from '../assets/foto_dani.jpg'
-
-import { Avatar, Dropdown } from 'flowbite-react';
-import { isMobile } from 'react-device-detect';
-
 const Header: React.FC = () => {
   
   return (
-    <header className="bg-black to-100% sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center py-2">
-        <div className="text-2xl font-semibold text-gray-100 px-4">
-            {/* <img src={imglogo} alt='logo' className='w-60 max-h-20 object-cover' /> */}
-        </div>
-        {isMobile ?
-       <nav className="space-x-4 w-fit overflow-hidden md:w-0" >
-          <Dropdown
-          arrowIcon={false}
-          inline
-          label={
-            <Avatar alt="User settings" img={imgPerfil} rounded className='min-w-[40px]' />
-          }
-        >
-          <Dropdown.Header>
-            <span className="block text-sm">Derik Bosing Sehn</span>
-            <span className="block truncate text-sm font-medium">derikbosing@gmail.com</span>
-            <span className="block truncate text-sm font-medium">{`(51) 9 99930-0707`}</span>
-          </Dropdown.Header>
-          <Dropdown.Item><a href="#inicio" className="text-gray-400 hover:text-gray-100 uppercase">Início</a></Dropdown.Item>
-          <Dropdown.Item><a href="#about" className="text-gray-400 hover:text-gray-100 uppercase">Sobre mim</a></Dropdown.Item>
-          <Dropdown.Item><a href="#services" className="text-gray-400 hover:text-gray-100 uppercase">Serviços</a></Dropdown.Item>
-          <Dropdown.Item><a href="#plans" className="text-gray-400 hover:text-gray-100 uppercase">Cardápio</a></Dropdown.Item>
-          <Dropdown.Item><a href="#contact" className="text-gray-400 hover:text-gray-100 uppercase">Contato</a></Dropdown.Item>
-          <Dropdown.Divider />
-        </Dropdown>
-        </nav>
-      :  
-        <nav className="space-x-4 text-lg font-thin w-0 overflow-hidden md:w-fit" >
-          <a href="#inicio" className="text-gray-400 hover:text-gray-100 uppercase">Início</a>
-          <a href="#about" className="text-gray-400 hover:text-gray-100 uppercase">Sobre Nós</a>
-          <a href="#services" className="text-gray-400 hover:text-gray-100 uppercase">Serviços</a>
-          <a href="#plans" className="text-gray-400 hover:text-gray-100 uppercase">Cardápio</a>
-          <a href="#contact" className="text-gray-400 hover:text-gray-100 uppercase">Contato</a>
-        </nav>
-      }
-        
+    <header className="fixed h-20 top-0 w-full z-50 bg-transparent">
+      <div className="container mx-auto flex justify-between items-center p-2 h-full">
+          <h1 className='text-3xl text-slate-300 hover:text-slate-200 transition-colors'>
+             Albyon
+          </h1> 
+           <h1 className='text-3xl text-slate-200 hover:text-slate-200 transition-colors'>
+             <button className='material-icons backdrop-filter bg-transparent'>
+                menu
+              </button>
+          </h1>
       </div>
     </header>
   );

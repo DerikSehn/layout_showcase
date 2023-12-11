@@ -17,8 +17,10 @@ export default  {
     extend: {},
   }, 
    plugins: [
-        // eslint-disable-next-line no-undef
-        require('flowbite/plugin')
+     // eslint-disable-next-line no-undef
+     require('tailwindcss-animated'),
+     // eslint-disable-next-line no-undef
+     require('flowbite/plugin')
     ]
 }
 
